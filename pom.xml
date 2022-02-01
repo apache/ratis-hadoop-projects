@@ -69,25 +69,10 @@
   </licenses>
 
   <modules>
-    <module>ratis-docs</module>
     <module>ratis-proto</module>
-    <module>ratis-common</module>
-    <module>ratis-client</module>
-    <module>ratis-server-api</module>
-    <module>ratis-server</module>
     <module>ratis-resource-bundle</module>
-    <module>ratis-grpc</module>
-    <module>ratis-netty</module>
     <module>ratis-hadoop</module>
-
-    <module>ratis-test</module>
-
-    <module>ratis-examples</module>
-    <module>ratis-replicated-map</module>
     <module>ratis-logservice</module>
-    <module>ratis-metrics</module>
-    <module>ratis-tools</module>
-    <module>ratis-shell</module>
     <module>ratis-assembly</module>
   </modules>
 
