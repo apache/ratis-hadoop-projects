@@ -83,9 +83,7 @@ jobs:
     strategy:
       matrix:
         profile:
-          - hadooprpc
           - logservice
-          - misc
       fail-fast: ${{ github.event_name == 'pull_request' }}
     steps:
         # TEMPORARY WHILE GITHUB FIXES https://github.com/actions/virtual-environments/issues/3185
