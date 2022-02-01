@@ -69,7 +69,6 @@
   </licenses>
 
   <modules>
-    <module>ratis-proto</module>
     <module>ratis-resource-bundle</module>
     <module>ratis-hadoop</module>
     <module>ratis-logservice</module>
