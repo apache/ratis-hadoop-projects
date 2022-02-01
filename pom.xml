@@ -183,6 +183,7 @@
 
     <shell-executable>bash</shell-executable>
 
+    <ratis.version>2.3.0-6fb2e54-SNAPSHOT</ratis.version>
     <hadoop.version>3.3.1</hadoop.version>
     <hadoop-maven-plugins.version>${hadoop.version}</hadoop-maven-plugins.version>
 
@@ -218,18 +219,18 @@
       <dependency>
         <artifactId>ratis-docs</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
 
       <dependency>
         <artifactId>ratis-client</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-client</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -237,12 +238,12 @@
       <dependency>
         <artifactId>ratis-common</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-common</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -250,70 +251,58 @@
       <dependency>
         <artifactId>ratis-examples</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-examples</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
       <dependency>
         <artifactId>ratis-experiments</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
        <artifactId>ratis-metrics</artifactId>
        <groupId>org.apache.ratis</groupId>
-       <version>${project.version}</version>
+       <version>${ratis.version}</version>
       </dependency>
       <dependency>
        <artifactId>ratis-metrics</artifactId>
        <groupId>org.apache.ratis</groupId>
-       <version>${project.version}</version>
+       <version>${ratis.version}</version>
        <type>test-jar</type>
        <scope>test</scope>
       </dependency>
       <dependency>
         <artifactId>ratis-tools</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-tools</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
       <dependency>
         <artifactId>ratis-shell</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-grpc</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-grpc</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
-        <type>test-jar</type>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-hadoop</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-hadoop</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -321,12 +310,12 @@
       <dependency>
         <artifactId>ratis-netty</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-netty</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -334,18 +323,18 @@
       <dependency>
         <artifactId>ratis-proto</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
 
       <dependency>
         <artifactId>ratis-replicated-map</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-replicated-map</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -353,18 +342,18 @@
       <dependency>
         <artifactId>ratis-server-api</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
 
       <dependency>
         <artifactId>ratis-server</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-server</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
       </dependency>
@@ -372,10 +361,23 @@
       <dependency>
         <artifactId>ratis-test</artifactId>
         <groupId>org.apache.ratis</groupId>
-        <version>${project.version}</version>
+        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-test</artifactId>
+        <groupId>org.apache.ratis</groupId>
+        <version>${ratis.version}</version>
+        <type>test-jar</type>
+        <scope>test</scope>
+      </dependency>
+
+      <dependency>
+        <artifactId>ratis-hadoop</artifactId>
+        <groupId>org.apache.ratis</groupId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <artifactId>ratis-hadoop</artifactId>
         <groupId>org.apache.ratis</groupId>
         <version>${project.version}</version>
         <type>test-jar</type>
@@ -1035,7 +1037,7 @@
     </profile>
 
     <profile>
-      <id>grpc-tests</id>
+      <id>hadooprpc-tests</id>
       <build>
         <plugins>
           <plugin>
@@ -1043,7 +1045,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <includes>
-                <include>org.apache.ratis.grpc.**</include>
+                <include>org.apache.ratis.hadooprpc.**</include>
               </includes>
             </configuration>
           </plugin>
@@ -1051,7 +1053,7 @@
       </build>
     </profile>
     <profile>
-      <id>server-tests</id>
+      <id>logservice-tests</id>
       <build>
         <plugins>
           <plugin>
@@ -1059,8 +1061,7 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <includes>
-                <include>org.apache.ratis.datastream.**</include>
-                <include>org.apache.ratis.server.**</include>
+                <include>org.apache.ratis.logservice.**</include>
               </includes>
             </configuration>
           </plugin>
@@ -1076,9 +1077,8 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <excludes>
-                <exclude>org.apache.ratis.datastream.**</exclude>
-                <exclude>org.apache.ratis.grpc.**</exclude>
-                <exclude>org.apache.ratis.server.**</exclude>
+                <exclude>org.apache.ratis.logservice.**</exclude>
+                <exclude>org.apache.ratis.hadooprpc.**</exclude>
               </excludes>
             </configuration>
           </plugin>

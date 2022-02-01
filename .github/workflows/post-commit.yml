@@ -83,8 +83,8 @@ jobs:
     strategy:
       matrix:
         profile:
-          - grpc
-          - server
+          - hadooprpc
+          - logservice
           - misc
       fail-fast: ${{ github.event_name == 'pull_request' }}
     steps:
