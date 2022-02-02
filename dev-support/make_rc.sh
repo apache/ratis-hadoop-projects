@@ -45,7 +45,7 @@ mvnGet() {
 # Check project name
 projectname=$(mvnGet project.name)
 projectversion=$(mvnGet project.version)
-if [ "${projectname}" = "Apache Ratis" ]; then
+if [ "${projectname}" = "Apache Ratis Hadoop Projects" ]; then
   echo
   echo "Prepare release artifacts for $projectname ${projectversion}"
   echo
@@ -101,8 +101,8 @@ prepare-src() {
   git commit -a -m "Change version for the version $RATISVERSION $RC"
 
   git config user.signingkey "${CODESIGNINGKEY}"
-  git tag -s -m "Release $RATISVERSION $RC" ratis-"${RATISVERSION}${RC}"
-  git reset --hard ratis-"${RATISVERSION}${RC}"
+  git tag -s -m "Release $RATISVERSION $RC" ratis-hadoop-projects-"${RATISVERSION}${RC}"
+  git reset --hard ratis-hadoop-projects-"${RATISVERSION}${RC}"
 
   git clean -fdx
 
@@ -116,8 +116,8 @@ prepare-bin() {
   rm -rf "$WORKINGDIR"
   mkdir -p "$WORKINGDIR"
   cd "$WORKINGDIR"
-  tar zvxf "$projectdir/ratis-assembly/target/apache-ratis-${RATISVERSION}-src.tar.gz"
-  cd "apache-ratis-${RATISVERSION}"
+  tar zvxf "$projectdir/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
+  cd "apache-ratis-hadoop-projects-${RATISVERSION}"
 
   mvnFun clean install assembly:single -DskipTests=true  -Prelease -Papache-release -Dgpg.keyname="${CODESIGNINGKEY}"
 }
@@ -127,8 +127,8 @@ assembly() {
   RCDIR="$SVNDISTDIR/${RATISVERSION}/${RC#-}"
   mkdir -p "$RCDIR"
   cd "$RCDIR"
-  cp "$WORKINGDIR/apache-ratis-${RATISVERSION}/ratis-assembly/target/apache-ratis-${RATISVERSION}-bin.tar.gz" "apache-ratis-${RATISVERSION}-bin.tar.gz"
-  cp "$projectdir/ratis-assembly/target/apache-ratis-${RATISVERSION}-src.tar.gz" "apache-ratis-${RATISVERSION}-src.tar.gz"
+  cp "$WORKINGDIR/apache-ratis-hadoop-projects-${RATISVERSION}/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz"
+  cp "$projectdir/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
   for i in *.tar.gz; do gpg  -u "${CODESIGNINGKEY}" --armor --output "${i}.asc" --detach-sig "${i}"; done
   for i in *.tar.gz; do gpg --print-md SHA512 "${i}" > "${i}.sha512"; done
   for i in *.tar.gz; do gpg --print-mds "${i}" > "${i}.mds"; done
@@ -138,7 +138,7 @@ assembly() {
 
 publish-git(){
   cd "$projectdir"
-  git push apache "ratis-${RATISVERSION}${RC}"
+  git push apache "ratis-hadoop-projects-${RATISVERSION}${RC}"
 }
 
 publish-svn() {

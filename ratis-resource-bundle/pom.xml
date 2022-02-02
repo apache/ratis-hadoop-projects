@@ -21,14 +21,14 @@
   -->
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>ratis</artifactId>
+    <artifactId>ratis-hadoop-projects</artifactId>
     <groupId>org.apache.ratis</groupId>
     <version>2.3.0-SNAPSHOT</version>
     <relativePath>..</relativePath>
   </parent>
 
   <artifactId>ratis-resource-bundle</artifactId>
-  <name>Apache Ratis - Resource Bundle</name>
+  <name>Apache Ratis Hadoop Projects - Resource Bundle</name>
   <description>licensing info for use when bundling works</description>
 
   <properties>
