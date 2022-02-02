@@ -69,10 +69,10 @@
   </licenses>
 
   <modules>
-    <module>ratis-resource-bundle</module>
+    <module>ratis-hadoop-projects-resource-bundle</module>
     <module>ratis-hadoop</module>
     <module>ratis-logservice</module>
-    <module>ratis-assembly</module>
+    <module>ratis-hadoop-projects-assembly</module>
   </modules>
 
   <pluginRepositories>
@@ -529,7 +529,7 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
           <configuration>
-            <!--Defer to the ratis-assembly sub-module.  It does all assembly-->
+            <!--Defer to the ratis-hadoop-projects-assembly sub-module.  It does all assembly-->
             <skipAssembly>true</skipAssembly>
           </configuration>
         </plugin>

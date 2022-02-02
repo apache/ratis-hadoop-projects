@@ -1339,7 +1339,7 @@ No license info included; must update supplemental-models for:
 
 g:${dep.groupId} AND a:${dep.artifactId} AND v:${dep.version}
 
-Until ratis-resource-bundle/src/main/resources/supplemental-models.xml
+Until ratis-hadoop-projects-resource-bundle/src/main/resources/supplemental-models.xml
 is updated, the build should fail.
 #end
 #if(${debug-print-included-work-info.equalsIgnoreCase("true")})

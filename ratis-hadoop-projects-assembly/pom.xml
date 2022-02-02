@@ -20,7 +20,7 @@
     <version>2.3.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>ratis-assembly</artifactId>
+  <artifactId>ratis-hadoop-projects-assembly</artifactId>
   <name>Apache Ratis Hadoop Projects - Project Assembly</name>
 
   <packaging>pom</packaging>
@@ -53,12 +53,12 @@
               </properties>
               <resourceBundles>
                 <!-- Will generate META-INF/DEPENDENCIES META-INF/LICENSE META-INF/NOTICE -->
-                <resourceBundle>${project.groupId}:ratis-resource-bundle:${project.version}
+                <resourceBundle>${project.groupId}:ratis-hadoop-projects-resource-bundle:${project.version}
                 </resourceBundle>
               </resourceBundles>
               <supplementalModelArtifacts>
                 <supplementalModelArtifact>
-                  ${project.groupId}:ratis-resource-bundle:${project.version}
+                  ${project.groupId}:ratis-hadoop-projects-resource-bundle:${project.version}
                 </supplementalModelArtifact>
               </supplementalModelArtifacts>
               <supplementalModels>
@@ -118,7 +118,7 @@
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <configuration>
-          <!--Else will use ratis-assembly as final name.-->
+          <!--Else will use ratis-hadoop-projects-assembly as final name.-->
           <finalName>apache-ratis-hadoop-projects-${project.version}</finalName>
           <skipAssembly>false</skipAssembly>
           <appendAssemblyId>true</appendAssemblyId>
@@ -159,7 +159,7 @@
     <!-- Intra-project dependencies -->
     <dependency>
       <groupId>org.apache.ratis</groupId>
-      <artifactId>ratis-resource-bundle</artifactId>
+      <artifactId>ratis-hadoop-projects-resource-bundle</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
      </dependency>

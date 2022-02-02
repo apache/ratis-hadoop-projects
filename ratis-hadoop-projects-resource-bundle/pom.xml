@@ -27,7 +27,7 @@
     <relativePath>..</relativePath>
   </parent>
 
-  <artifactId>ratis-resource-bundle</artifactId>
+  <artifactId>ratis-hadoop-projects-resource-bundle</artifactId>
   <name>Apache Ratis Hadoop Projects - Resource Bundle</name>
   <description>licensing info for use when bundling works</description>
 
@@ -51,7 +51,7 @@
         <artifactId>maven-remote-resources-plugin</artifactId>
         <executions>
           <execution>
-            <id>build-ratis-resource-bundle</id>
+            <id>build-ratis-hadoop-projects-resource-bundle</id>
             <goals>
               <goal>bundle</goal>
             </goals>

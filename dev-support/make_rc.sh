@@ -116,7 +116,7 @@ prepare-bin() {
   rm -rf "$WORKINGDIR"
   mkdir -p "$WORKINGDIR"
   cd "$WORKINGDIR"
-  tar zvxf "$projectdir/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
+  tar zvxf "$projectdir/ratis-hadoop-projects-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
   cd "apache-ratis-hadoop-projects-${RATISVERSION}"
 
   mvnFun clean install assembly:single -DskipTests=true  -Prelease -Papache-release -Dgpg.keyname="${CODESIGNINGKEY}"
@@ -127,8 +127,8 @@ assembly() {
   RCDIR="$SVNDISTDIR/${RATISVERSION}/${RC#-}"
   mkdir -p "$RCDIR"
   cd "$RCDIR"
-  cp "$WORKINGDIR/apache-ratis-hadoop-projects-${RATISVERSION}/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz"
-  cp "$projectdir/ratis-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
+  cp "$WORKINGDIR/apache-ratis-hadoop-projects-${RATISVERSION}/ratis-hadoop-projects-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-bin.tar.gz"
+  cp "$projectdir/ratis-hadoop-projects-assembly/target/apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz" "apache-ratis-hadoop-projects-${RATISVERSION}-src.tar.gz"
   for i in *.tar.gz; do gpg  -u "${CODESIGNINGKEY}" --armor --output "${i}.asc" --detach-sig "${i}"; done
   for i in *.tar.gz; do gpg --print-md SHA512 "${i}" > "${i}.sha512"; done
   for i in *.tar.gz; do gpg --print-mds "${i}" > "${i}.mds"; done

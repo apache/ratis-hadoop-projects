@@ -29,10 +29,10 @@
     <moduleSet>
       <useAllReactorProjects>true</useAllReactorProjects>
       <includes>
-        <include>org.apache.ratis:ratis-assembly</include>
+        <include>org.apache.ratis:ratis-hadoop-projects-assembly</include>
         <include>org.apache.ratis:ratis-hadoop</include>
         <include>org.apache.ratis:ratis-logservice</include>
-        <include>org.apache.ratis:ratis-resource-bundle</include>
+        <include>org.apache.ratis:ratis-hadoop-projects-resource-bundle</include>
       </includes>
       <binaries>
         <outputDirectory>jars</outputDirectory>
