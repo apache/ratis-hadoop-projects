@@ -126,8 +126,6 @@
           <descriptors>
             <descriptor>src/main/assembly/src.xml</descriptor>
             <descriptor>src/main/assembly/bin.xml</descriptor>
-            <descriptor>src/main/assembly/examples-bin.xml</descriptor>
-            <descriptor>src/main/assembly/shell-bin.xml</descriptor>
           </descriptors>
         </configuration>
       </plugin>
