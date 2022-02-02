@@ -215,12 +215,6 @@
     <dependencies>
       <!-- Internal dependencies -->
       <dependency>
-        <artifactId>ratis-docs</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-      </dependency>
-
-      <dependency>
         <artifactId>ratis-client</artifactId>
         <groupId>org.apache.ratis</groupId>
         <version>${ratis.version}</version>
@@ -246,23 +240,6 @@
         <scope>test</scope>
       </dependency>
 
-      <dependency>
-        <artifactId>ratis-examples</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-examples</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-        <type>test-jar</type>
-        <scope>test</scope>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-experiments</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-      </dependency>
       <dependency>
        <artifactId>ratis-metrics</artifactId>
        <groupId>org.apache.ratis</groupId>
@@ -286,11 +263,6 @@
         <version>${ratis.version}</version>
         <type>test-jar</type>
         <scope>test</scope>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-shell</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
       </dependency>
       <dependency>
         <artifactId>ratis-grpc</artifactId>
@@ -322,19 +294,6 @@
         <artifactId>ratis-proto</artifactId>
         <groupId>org.apache.ratis</groupId>
         <version>${ratis.version}</version>
-      </dependency>
-
-      <dependency>
-        <artifactId>ratis-replicated-map</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-      </dependency>
-      <dependency>
-        <artifactId>ratis-replicated-map</artifactId>
-        <groupId>org.apache.ratis</groupId>
-        <version>${ratis.version}</version>
-        <type>test-jar</type>
-        <scope>test</scope>
       </dependency>
 
       <dependency>
