@@ -149,27 +149,6 @@
               <clearOutputDirectory>false</clearOutputDirectory>
             </configuration>
           </execution>
-          <execution>
-            <id>compile-grpc</id>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>compile-custom</goal>
-            </goals>
-            <configuration>
-              <pluginId>grpc-java</pluginId>
-              <pluginArtifact>
-                io.grpc:protoc-gen-grpc-java:${shaded.grpc.version}:exe:${os.detected.classifier}
-              </pluginArtifact>
-              <protocArtifact>
-                com.google.protobuf:protoc:${shaded.protobuf.version}:exe:${os.detected.classifier}
-              </protocArtifact>
-              <includes>
-                <include>Hadoop.proto</include>
-              </includes>
-              <!-- With multiple executions, this must be `false` otherwise we wipe out the previous execution -->
-              <clearOutputDirectory>false</clearOutputDirectory>
-            </configuration>
-          </execution>
         </executions>
       </plugin>
       <!-- Modify the generated source to use our shaded protobuf -->
@@ -188,17 +167,12 @@
         <configuration>
           <basedir>${project.build.directory}/generated-sources</basedir>
           <includes>
-            <include>**/grpc-java/**/*.java</include>
             <include>**/HadoopProtos.java</include>
           </includes>
           <replacements>
             <replacement>
               <token>([^\.])com.google</token>
               <value>$1org.apache.ratis.thirdparty.com.google</value>
-            </replacement>
-            <replacement>
-              <token>([^\.])io.grpc</token>
-              <value>$1org.apache.ratis.thirdparty.io.grpc</value>
             </replacement>
           </replacements>
         </configuration>
