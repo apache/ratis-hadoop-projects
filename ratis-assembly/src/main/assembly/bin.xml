@@ -30,19 +30,8 @@
       <useAllReactorProjects>true</useAllReactorProjects>
       <includes>
         <include>org.apache.ratis:ratis-assembly</include>
-        <include>org.apache.ratis:ratis-client</include>
-        <include>org.apache.ratis:ratis-common</include>
-        <include>org.apache.ratis:ratis-grpc</include>
         <include>org.apache.ratis:ratis-hadoop</include>
         <include>org.apache.ratis:ratis-logservice</include>
-        <include>org.apache.ratis:ratis-netty</include>
-        <include>org.apache.ratis:ratis-proto</include>
-        <include>org.apache.ratis:ratis-replicated-map</include>
-        <include>org.apache.ratis:ratis-server-api</include>
-        <include>org.apache.ratis:ratis-server</include>
-        <include>org.apache.ratis:ratis-test</include>
-        <include>org.apache.ratis:ratis-metrics</include>
-        <include>org.apache.ratis:ratis-tools</include>
         <include>org.apache.ratis:ratis-resource-bundle</include>
       </includes>
       <binaries>
@@ -70,13 +59,6 @@
         <include>NOTICE</include>
       </includes>
       <fileMode>0644</fileMode>
-    </fileSet>
-    <fileSet>
-      <directory>${project.basedir}/../ratis-docs/target/classes/docs
-      </directory>
-      <outputDirectory>docs</outputDirectory>
-      <fileMode>0644</fileMode>
-      <directoryMode>0755</directoryMode>
     </fileSet>
     <!-- Include dev support tools -->
     <fileSet>
