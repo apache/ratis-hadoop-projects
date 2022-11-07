@@ -118,7 +118,10 @@ public class MetaStateMachine extends BaseStateMachine {
         this.raftServer = server;
         this.logServiceMetaDataMetrics = new LogServiceMetaDataMetrics(server.getId().toString());
         super.initialize(server, groupId, storage);
-        peerHealthChecker = new Daemon(new PeerHealthChecker(),"peer-Health-Checker");
+        this.peerHealthChecker = Daemon.newBuilder()
+            .setRunnable(new PeerHealthChecker())
+            .setName("peer-Health-Checker")
+            .build();
         peerHealthChecker.start();
     }
 

@@ -146,8 +146,11 @@ public class LogServer extends BaseServer {
                 .setProperties(properties)
                 .build();
         metaClient.io().send(() -> MetaServiceProtoUtil.toPingRequestProto(peer).toByteString());
-        daemon = new Daemon(new HeartbeatSender(RaftPeer.newBuilder().setId(raftServer.getId()).build()),
-                "heartbeat-Sender"+raftServer.getId());
+        final HeartbeatSender heartbeatSender = new HeartbeatSender(raftServer.getPeer());
+        daemon = Daemon.newBuilder()
+            .setName("heartbeat-Sender"+raftServer.getId())
+            .setRunnable(heartbeatSender)
+            .build();
         daemon.start();
     }
 

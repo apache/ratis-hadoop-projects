@@ -31,6 +31,7 @@ import org.apache.ratis.protocol.GroupInfoRequest;
 import org.apache.ratis.protocol.GroupListReply;
 import org.apache.ratis.protocol.GroupListRequest;
 import org.apache.ratis.protocol.GroupManagementRequest;
+import org.apache.ratis.protocol.LeaderElectionManagementRequest;
 import org.apache.ratis.protocol.RaftClientReply;
 import org.apache.ratis.protocol.RaftClientRequest;
 import org.apache.ratis.protocol.SetConfigurationRequest;
@@ -105,6 +106,12 @@ public class CombinedClientProtocolClientSideTranslatorPB
         ClientProtoUtils::toRaftClientReply,
         ClientOps.snapshotManagement,
         RaftProtos.RaftClientReplyProto::parseFrom);
+  }
+
+  @Override
+  public RaftClientReply leaderElectionManagement(LeaderElectionManagementRequest leaderElectionManagementRequest)
+      throws IOException {
+    throw new UnsupportedOperationException();
   }
 
   @Override

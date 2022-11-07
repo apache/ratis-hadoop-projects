@@ -81,6 +81,14 @@ public final class LogServiceConfiguration extends RaftProperties {
     addResource(resourcePath);
   }
 
+  private void addResource(String resource) {
+    //TODO implement this
+  }
+
+  private void addResource(URL resource) {
+    //TODO implement this
+  }
+
   /**
    * Adds configuration options from logservice.xml
    * for LogServer
