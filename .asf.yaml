@@ -21,15 +21,28 @@ github:
     - consensus
     - java
   enabled_merge_buttons:
-    squash:  true
-    merge:   false
-    rebase:  false
+    squash: true
+    merge: false
+    rebase: false
 
+  rulesets:
+    - name: "Default Branch Protection"
+      type: branch
+      branches:
+        includes:
+          - "~DEFAULT_BRANCH"
+          - "release/*"
+          - "rel/*"
+        excludes: []
+      bypass_teams:
+        - root
+      restrict_deletion: true
+      restrict_force_push: true
 notifications:
-  commits:      commits@ratis.apache.org
-  issues:       issues@ratis.apache.org
+  commits: commits@ratis.apache.org
+  issues: issues@ratis.apache.org
   pullrequests: issues@ratis.apache.org
   jira_options: link label worklog
 
 publish:
-  whoami:  asf-site
+  whoami: asf-site
